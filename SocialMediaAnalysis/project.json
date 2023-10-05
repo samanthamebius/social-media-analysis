@@ -2,7 +2,7 @@
   "name": "SocialMediaAnalysis",
   "projectId": "9fa96e4d-c577-4c3d-abdf-53304d77090c",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "Complete.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
@@ -50,6 +50,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "0a49cf44-95e1-43a9-a451-b6098f311e1c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Complete.xaml",
+      "uniqueId": "8a7013ac-eb02-482f-9c52-fe2c17912c8f",
       "input": [],
       "output": []
     }
