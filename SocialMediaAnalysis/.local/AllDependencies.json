@@ -9185,15 +9185,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xzha897\\.nuget\\packages\\": {}
+    "C:\\Users\\saman\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "SocialMediaAnalysis",
       "projectName": "SocialMediaAnalysis",
-      "projectPath": "C:\\Users\\xzha897\\OneDrive - The University of Auckland\\Documents\\GitHub\\social-media-analysis\\SocialMediaAnalysis\\.local",
-      "packagesPath": "C:\\Users\\xzha897\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xzha897\\OneDrive - The University of Auckland\\Documents\\GitHub\\social-media-analysis\\SocialMediaAnalysis\\.local"
+      "projectPath": "C:\\Users\\saman\\OneDrive\\Documents\\social-media-analysis\\SocialMediaAnalysis\\.local",
+      "packagesPath": "C:\\Users\\saman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\saman\\OneDrive\\Documents\\social-media-analysis\\SocialMediaAnalysis\\.local"
     },
     "frameworks": {
       "net461": {
@@ -9229,7 +9229,7 @@
             "version": "[1.18.0, 1.18.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\xzha897\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
