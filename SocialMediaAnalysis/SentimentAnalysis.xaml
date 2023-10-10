@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,4475" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1244,4558" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,63 +44,68 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>UiPath.MLServices</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="904,4410" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="944,4493" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="862,4318" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="882,4382" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Loop through each comment " sap:VirtualizedContainerService.HintSize="828,4232" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Loop through each comment " sap:VirtualizedContainerService.HintSize="848,4295" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Double" Name="maxNumber" />
               <Variable x:TypeArguments="x:String" Name="maxSentiment" />
@@ -110,19 +115,19 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="786,1514" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="inputData.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="786,1558" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="inputData.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Perform sentiment analysis on each comment" sap:VirtualizedContainerService.HintSize="552,1248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence DisplayName="Perform sentiment analysis on each comment" sap:VirtualizedContainerService.HintSize="592,1291" sap2010:WorkflowViewState.IdRef="Sequence_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,1156" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1:E100&quot;)]" SaveAfterEachRow="False">
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,1180" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1:E100&quot;)]" SaveAfterEachRow="False">
                       <ueab:ExcelForEachRowX.Body>
                         <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                           <ActivityAction.Argument1>
@@ -131,7 +136,7 @@
                           <ActivityAction.Argument2>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                           </ActivityAction.Argument2>
-                          <Sequence DisplayName="Save sentiment analysis results to individual column" sap:VirtualizedContainerService.HintSize="476,976" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence DisplayName="Save sentiment analysis results to individual column" sap:VirtualizedContainerService.HintSize="496,999" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="resultJson" />
                               <Variable x:TypeArguments="njl:JObject" Name="resultJsonObject" />
@@ -141,19 +146,16 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="bc8a16d9-78d6-4099-bad1-63f5b56cb7da" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[CurrentRow(&quot;Comment&quot;)]" JsonResponse="[resultJson]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-uipath-aue.deskover.com/public/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" TotalCount="1">
+                            <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="bc8a16d9-78d6-4099-bad1-63f5b56cb7da" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[CurrentRow(&quot;Comment&quot;).Trim().Replace(vbCr, &quot; &quot;).Replace(vbLf, &quot; &quot;)]" JsonResponse="[resultJson]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-uipath-aue.deskover.com/public/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" TotalCount="1">
                               <uma:MLSkills.MLSkillList>
                                 <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
-                                  <x:Reference>__ReferenceID0</x:Reference>
+                                  <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-aue.deskover.com/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" AccountId="2375bb97-f4d7-4903-8ac9-4cd58302a6ef" Description="" Id="d32a12b4-5a0e-46c7-bf5f-9f8aed67a93e" InputDescription="Text to be analyzed.For example:&quot;I am dissatisfied with this service&quot;" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1). Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;. For example: {&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}" ProjectId="eb5424b9-d5f4-4d76-b403-a587860a2377" TenantId="23ec1399-e03d-4e7e-9a00-fb3c6925d357" />
                                 </scg:List>
                               </uma:MLSkills.MLSkillList>
-                              <uma:MLSkills.SelectedMLSkill>
-                                <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-aue.deskover.com/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" AccountId="2375bb97-f4d7-4903-8ac9-4cd58302a6ef" Description="" Id="d32a12b4-5a0e-46c7-bf5f-9f8aed67a93e" InputDescription="Text to be analyzed.For example:&quot;I am dissatisfied with this service&quot;" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1). Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;. For example: {&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}" ProjectId="eb5424b9-d5f4-4d76-b403-a587860a2377" TenantId="23ec1399-e03d-4e7e-9a00-fb3c6925d357" />
-                              </uma:MLSkills.SelectedMLSkill>
                             </uma:MLSkills>
-                            <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[resultJsonObject]" JsonString="[resultJson]" />
-                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Sentiment&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[resultJsonObject.SelectToken(&quot;sentiment&quot;).ToString]" />
-                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Confidence&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[resultJsonObject.SelectToken(&quot;confidence&quot;).ToString]" />
+                            <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[resultJsonObject]" JsonString="[resultJson]" />
+                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Sentiment&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[resultJsonObject.SelectToken(&quot;sentiment&quot;).ToString]" />
+                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Confidence&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[resultJsonObject.SelectToken(&quot;confidence&quot;).ToString]" />
                           </Sequence>
                         </ActivityAction>
                       </ueab:ExcelForEachRowX.Body>

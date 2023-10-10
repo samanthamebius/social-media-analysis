@@ -4,7 +4,7 @@
     <x:Property Name="urls" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1210,1330</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1523</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -41,6 +41,8 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -75,13 +77,13 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RedditPostUrls" sap:VirtualizedContainerService.HintSize="654,1265" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RedditPostUrls" sap:VirtualizedContainerService.HintSize="654,1458" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,5 +190,12 @@
         </ui:OpenBrowser.Body>
       </ui:OpenBrowser>
     </Sequence>
+    <ui:WriteCsvFile AddHeaders="True" Delimitator="Comma" DisplayName="Write CSV" FilePath="output.csv" sap:VirtualizedContainerService.HintSize="592,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+      <ui:WriteCsvFile.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">urls</mca:CSharpValue>
+        </InArgument>
+      </ui:WriteCsvFile.DataTable>
+    </ui:WriteCsvFile>
   </Sequence>
 </Activity>
