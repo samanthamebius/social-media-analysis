@@ -3,7 +3,7 @@
     <x:Property Name="urls" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1140,1765</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,2359</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -82,10 +82,9 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RedditComments" sap:VirtualizedContainerService.HintSize="594,1700" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RedditComments" sap:VirtualizedContainerService.HintSize="728,2294" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="CommentsDataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="DoesFileExist" />
@@ -95,14 +94,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="532,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="Output\\RedditComments.csv">
+    <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="666,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="Output\\inputData.csv">
       <ui:FileExistsX.Exists>
         <OutArgument x:TypeArguments="x:Boolean">
           <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">DoesFileExist</mca:CSharpReference>
         </OutArgument>
       </ui:FileExistsX.Exists>
     </ui:FileExistsX>
-    <If sap:VirtualizedContainerService.HintSize="532,380" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap:VirtualizedContainerService.HintSize="666,380" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">DoesFileExist</mca:CSharpValue>
@@ -115,7 +114,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Output\\RedditComments.csv" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Output\\inputData.csv" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -128,20 +127,20 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Loop over the first five URLs. We only loop over five because UiPath struggles with Reddit scraping, and therefore it would take too long if we did the entire list." />
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="532,583" sap2010:WorkflowViewState.IdRef="ForEach`1_4">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="666,113" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Loop over the first five URLs. We only loop over five because UiPath struggles with Reddit scraping, and therefore it would take too long if we did the entire list." />
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="666,1177" sap2010:WorkflowViewState.IdRef="ForEach`1_4">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,457" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="630,1051" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,346" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="568,940" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <TryCatch.Try>
                 <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://old.reddit.com/r/breakingbad/comments/175kels/breaking_bad_characters_last_words/" sap:VirtualizedContainerService.HintSize="530,690" sap2010:WorkflowViewState.IdRef="OpenBrowser_2">
                   <ui:OpenBrowser.Body>
@@ -177,7 +176,7 @@
                             </InArgument>
                           </ui:LogMessage.Message>
                         </ui:LogMessage>
-                        <ui:AppendCsvFile Delimitator="Comma" DisplayName="Append to CSV" FilePath="Output\\RedditComments.csv" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="AppendCsvFile_2">
+                        <ui:AppendCsvFile Delimitator="Comma" DisplayName="Append to CSV" FilePath="Output\\inputData.csv" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="AppendCsvFile_2">
                           <ui:AppendCsvFile.DataTable>
                             <InArgument x:TypeArguments="sd:DataTable">
                               <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">CommentsDataTable</mca:CSharpValue>
@@ -196,7 +195,7 @@
                 </ui:OpenBrowser>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="534,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -216,10 +215,10 @@
                     </ui:LogMessage>
                   </ActivityAction>
                 </Catch>
-                <Catch x:TypeArguments="ui:SelectorOperationException" sap:VirtualizedContainerService.HintSize="400,161" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                <Catch x:TypeArguments="ui:SelectorOperationException" sap:VirtualizedContainerService.HintSize="534,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -247,7 +246,7 @@
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each post URL" sap:VirtualizedContainerService.HintSize="532,220" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each post URL" sap:VirtualizedContainerService.HintSize="666,220" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
