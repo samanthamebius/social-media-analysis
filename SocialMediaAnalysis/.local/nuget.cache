@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fG5uGbkElLdBDwrngyvge7zr7wRsBMeD7rPGYBmZwQtgXo1aDViE/lcE+YzebrkAqcvygMFlTgO/488LOPh95A==",
+  "dgSpecHash": "USP0febRKXtTtq1EMji8t6X/+wD40wmkaJB0Ilzooe3V3d1SBrhsq7BV34Gp3Ay6eA0CuRDdXBARL/0zCQ+4BQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xzha897\\OneDrive - The University of Auckland\\Documents\\GitHub\\social-media-analysis\\SocialMediaAnalysis\\.local\\",
+  "projectFilePath": "C:\\Users\\xzha897\\Documents\\GitHub\\social-media-analysis\\SocialMediaAnalysis\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\xzha897\\.nuget\\packages\\avalonedit\\6.1.3.50\\avalonedit.6.1.3.50.nupkg.sha512",
     "C:\\Users\\xzha897\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
