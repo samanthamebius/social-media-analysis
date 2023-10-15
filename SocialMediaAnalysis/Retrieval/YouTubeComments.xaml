@@ -3,7 +3,7 @@
     <x:Property Name="urls" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1150,1464</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1254,1827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,7 +90,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="YouTubeComments" sap:VirtualizedContainerService.HintSize="623,1399" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="YouTubeComments" sap:VirtualizedContainerService.HintSize="742,1762" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DoesFileExist" />
       <Variable x:TypeArguments="sd:DataTable" Name="CommentsDataTable" />
@@ -100,27 +100,34 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="581,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="Output\\YouTubeComments.csv">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Starting YouTube Comment Retrieval"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="680,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="Output\\YouTubeComments.csv">
       <ui:FileExistsX.Exists>
         <OutArgument x:TypeArguments="x:Boolean">
           <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">DoesFileExist</mca:CSharpReference>
         </OutArgument>
       </ui:FileExistsX.Exists>
     </ui:FileExistsX>
-    <If sap:VirtualizedContainerService.HintSize="581,358" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap:VirtualizedContainerService.HintSize="680,380" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">DoesFileExist</mca:CSharpValue>
         </InArgument>
       </If.Condition>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,171" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="496,191" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Output\\YouTubeComments.csv" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Output\\YouTubeComments.csv" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -133,33 +140,33 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each video URL" sap:VirtualizedContainerService.HintSize="581,737" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each video URL" sap:VirtualizedContainerService.HintSize="680,794" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="547,622" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="646,677" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="505,530" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="584,566" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Current Video" sap:VirtualizedContainerService.HintSize="467,259" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
+                <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Current Video" sap:VirtualizedContainerService.HintSize="546,294" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
                   <ui:OpenBrowser.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence sap:VirtualizedContainerService.HintSize="512,192" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Retrive Comments Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Retrive Comments Sequence" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="test" />
                           </Sequence.Variables>
@@ -243,7 +250,7 @@
                 </ui:OpenBrowser>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="471,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="550,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -254,7 +261,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Comments could not be retrieved for: " + string.Join("", CurrentRow.ItemArray)</mca:CSharpValue>
@@ -263,7 +270,7 @@
                     </ui:LogMessage>
                   </ActivityAction>
                 </Catch>
-                <Catch x:TypeArguments="ui:SelectorOperationException" sap:VirtualizedContainerService.HintSize="471,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                <Catch x:TypeArguments="ui:SelectorOperationException" sap:VirtualizedContainerService.HintSize="550,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -274,7 +281,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:SelectorOperationException" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Comments could not be retrieved for: " + string.Join("", CurrentRow.ItemArray)</mca:CSharpValue>
@@ -289,7 +296,7 @@
                     </ui:LogMessage>
                   </ActivityAction>
                 </Catch>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="471,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="550,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -300,7 +307,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+                    <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
@@ -314,5 +321,12 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"Retrieved &lt;number&gt; Youtube Comments"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
