@@ -12,11 +12,61 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "topic&Sequence_14",
-        "CommentsDataTable&Sequence_14",
-        "URLDataTable&Sequence_14"
+        "keyword&Sequence_14",
+        "urls&Sequence_14",
+        "website&Sequence_14"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Analysis/SentimentAnalysis.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "csvDT&Sequence_17",
+        "maxNumber&Sequence_4",
+        "maxSentiment&Sequence_4",
+        "resultJson&Sequence_3",
+        "resultJsonObject&Sequence_3",
+        "currentSentiment&Sequence_9",
+        "variable1&Sequence_9",
+        "dt&Sequence_9",
+        "dtUpdated&Sequence_9",
+        "print&Sequence_9",
+        "finalOutput&Sequence_9",
+        "dtUpdatedValue&Sequence_9",
+        "currentNumber&Sequence_11",
+        "currentSentiment&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Retrieval/YouTubeComments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DoesFileExist&Sequence_1",
+        "CommentsDataTable&Sequence_1",
+        "test&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "urls"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Retrieval/RedditComments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CommentsDataTable&Sequence_1",
+        "DoesFileExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "urls"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
