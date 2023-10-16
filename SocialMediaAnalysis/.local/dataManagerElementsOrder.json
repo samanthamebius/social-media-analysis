@@ -69,31 +69,6 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
-    },
-    {
-      "Path": "Retrieval/RedditPostUrls.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "PostsDataTable&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "keyword",
-        "urls"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Retrieval/YouTubePostUrls.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "PostsDataTable&Sequence_8"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "keyword"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
     }
   ]
 }
