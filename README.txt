@@ -8,6 +8,11 @@ The proposed project is centred around the specific use case of trend identifica
 Workflow Note
 The project is written using the modern C# variant of UiPath. One of the key workflows in this project, "Sentiment Analysis," is however implemented using Visual Basic. This choice was driven by the Excel integration requirements for this project, for data transformation and analysis. Visual Basic provides the necessary capabilities to seamlessly interact with Excel data.
 
+Demo
+Video demos are provided for both YouTube and Reddit:
+ * YouTube Demo: 'YouTube Demo.mp4'
+ * Reddit Demo: 'Reddit Demo.mp4'
+
 Usage
 In order to use the workflow:
 
