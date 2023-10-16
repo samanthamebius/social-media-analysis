@@ -3,7 +3,7 @@
     <x:Property Name="urls" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1127,1563</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1244,1827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,7 +89,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="YouTubeComments" sap:VirtualizedContainerService.HintSize="742,1498" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="YouTubeComments" sap:VirtualizedContainerService.HintSize="742,1762" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DoesFileExist" />
       <Variable x:TypeArguments="sd:DataTable" Name="CommentsDataTable" />
@@ -99,6 +99,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Starting YouTube Comment Retrieval"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
     <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="680,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="Output\\inputData.csv">
       <ui:FileExistsX.Exists>
         <OutArgument x:TypeArguments="x:Boolean">
@@ -132,13 +139,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each video URL" sap:VirtualizedContainerService.HintSize="680,794" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For each video URL" sap:VirtualizedContainerService.HintSize="680,926" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="646,677" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="646,809" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +165,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Retrive Comments Sequence" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Retrive Comments Sequence" sap:VirtualizedContainerService.HintSize="512,1054" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="test" />
                           </Sequence.Variables>
@@ -208,7 +215,7 @@
                               </ui:Click.Target>
                             </ui:Click>
                           </Sequence>
-                          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Comments" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Comments' attr='text'&gt;&lt;webctrl tag='ytd-comment-thread-renderer' /&gt;&lt;webctrl tag='ytd-comment-renderer' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ytd-expander' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
+                          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Comments" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Comments' attr='text'&gt;&lt;webctrl tag='ytd-comment-thread-renderer' /&gt;&lt;webctrl tag='ytd-comment-renderer' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ytd-expander' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="450,107" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
                             <ui:ExtractData.DataTable>
                               <InOutArgument x:TypeArguments="sd:DataTable">
                                 <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">CommentsDataTable</mca:CSharpReference>
@@ -222,14 +229,14 @@
                               </ui:Target>
                             </ui:ExtractData.Target>
                           </ui:ExtractData>
-                          <ui:AppendCsvFile Delimitator="Comma" DisplayName="Append to CSV" FilePath="Output\\YouTubeComments.csv" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="AppendCsvFile_3">
+                          <ui:AppendCsvFile Delimitator="Comma" DisplayName="Append to CSV" FilePath="Output\\inputData.csv" sap:VirtualizedContainerService.HintSize="450,133" sap2010:WorkflowViewState.IdRef="AppendCsvFile_3">
                             <ui:AppendCsvFile.DataTable>
                               <InArgument x:TypeArguments="sd:DataTable">
                                 <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">CommentsDataTable</mca:CSharpValue>
                               </InArgument>
                             </ui:AppendCsvFile.DataTable>
                           </ui:AppendCsvFile>
-                          <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                          <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                         </Sequence>
                       </Sequence>
                     </ActivityAction>
@@ -304,6 +311,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"Retrieved &lt;number&gt; Youtube Comments"</mca:CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>

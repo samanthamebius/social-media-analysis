@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1127,5839" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1244,5929" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,13 +94,14 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="946,5774" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="946,5864" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="884,267" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="884,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="excel" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="884,184" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <Sequence DisplayName="Cleanup Files" sap:VirtualizedContainerService.HintSize="496,311" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <sap:WorkflowViewStateService.ViewState>
@@ -113,10 +114,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -227,15 +228,12 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="bc8a16d9-78d6-4099-bad1-63f5b56cb7da" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[CurrentRow.ByIndex(0).Trim().Replace(vbCr, &quot; &quot;).Replace(vbLf, &quot; &quot;)]" JsonResponse="[resultJson]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-uipath-aue.deskover.com/public/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" TotalCount="1">
+                                    <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="bc8a16d9-78d6-4099-bad1-63f5b56cb7da" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[CurrentRow.ByIndex(0).Trim().Replace(vbCr, &quot; &quot;).Replace(vbLf, &quot; &quot;)]" JsonResponse="[resultJson]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-uipath-aue.deskover.com/public/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" TotalCount="1">
                                       <uma:MLSkills.MLSkillList>
                                         <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
-                                          <x:Reference>__ReferenceID0</x:Reference>
+                                          <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-aue.deskover.com/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" AccountId="2375bb97-f4d7-4903-8ac9-4cd58302a6ef" Description="" Id="d32a12b4-5a0e-46c7-bf5f-9f8aed67a93e" InputDescription="Text to be analyzed.For example:&quot;I am dissatisfied with this service&quot;" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1). Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;. For example: {&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}" ProjectId="eb5424b9-d5f4-4d76-b403-a587860a2377" TenantId="23ec1399-e03d-4e7e-9a00-fb3c6925d357" />
                                         </scg:List>
                                       </uma:MLSkills.MLSkillList>
-                                      <uma:MLSkills.SelectedMLSkill>
-                                        <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-aue.deskover.com/mlskills/2375bb97-f4d7-4903-8ac9-4cd58302a6ef/23ec1399-e03d-4e7e-9a00-fb3c6925d357/sentimentanalysis" AccountId="2375bb97-f4d7-4903-8ac9-4cd58302a6ef" Description="" Id="d32a12b4-5a0e-46c7-bf5f-9f8aed67a93e" InputDescription="Text to be analyzed.For example:&quot;I am dissatisfied with this service&quot;" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1). Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;. For example: {&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}" ProjectId="eb5424b9-d5f4-4d76-b403-a587860a2377" TenantId="23ec1399-e03d-4e7e-9a00-fb3c6925d357" />
-                                      </uma:MLSkills.SelectedMLSkill>
                                     </uma:MLSkills>
                                     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[resultJsonObject]" JsonString="[resultJson]" />
                                     <ueab:WriteCellX Cell="[CurrentRow.ByIndex(1)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[resultJsonObject.SelectToken(&quot;sentiment&quot;).ToString]" />
